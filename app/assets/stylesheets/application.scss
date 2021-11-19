@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import "chota/dist/chota.css";
+ @import "chota/dist/chota";
  body.dark {
    --bg-color: #000;
    --bg-secondary-color: #131316;

@@ -33,8 +33,9 @@ local:
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
 backblaze:
-  service: Backblaze
-  bucket_name: lastname-videos
-  bucket_id: <%= ENV['B2_BUCKET_ID'] %>
-  key_id: <%= ENV['B2_KEY_ID'] %>
-  key_token: <%= ENV['B2_KEY_TOKEN'] %>
+  service: S3
+  bucket: lastname-videos
+  region: uw-west-000
+  access_key_id: <%= ENV['B2_KEY_ID'] %>
+  secret_access_key: <%= ENV['B2_KEY_TOKEN'] %>
+  endpoint: https://s3.us-west-000.backblazeb2.com

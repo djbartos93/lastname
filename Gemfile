@@ -67,5 +67,5 @@ gem 'devise'
 gem 'cancancan'
 
 group :production do
-  gem 'activestorage-backblaze'
+  gem "aws-sdk-s3"
 end
