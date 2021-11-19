@@ -13,14 +13,24 @@
   </head>
 
   <body id="top">
+<div class=container>
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="brand" href="#">DJ Lastname</a>
+
+        <%= link_to "Home", root_url, class: "button clear" %>
+        <%= link_to "More Posts", root_url, class: "button clear" %>
+
+
+    </div>
+  </nav>
 
     <% if user_signed_in? %>
   Signed in as <%= current_user.email %>. Not you?
   <%= link_to "Edit profile", edit_user_registration_path %>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <% else %>
-  <%= link_to "Sign up", new_user_registration_path %> or
-  <%= link_to "sign in", new_user_session_path %>
+
 <% end %>
 
 
@@ -29,7 +39,8 @@
 
     <%= yield %>
 
-
+    <%= link_to "Sign up", new_user_registration_path %> or
+    <%= link_to "sign in", new_user_session_path %>
     <a href="javascript:void(0)" id="theme-switch" onclick="switchMode(this)">☀️</a>
   </body>
 
