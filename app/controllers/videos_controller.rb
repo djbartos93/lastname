@@ -64,6 +64,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:name, :recording_date)
+      params.require(:video).permit(:name, :recording_date, :stream_recording_video)
     end
 end

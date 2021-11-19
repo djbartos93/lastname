@@ -10,5 +10,9 @@
   <%= @video.recording_date %>
 </p>
 
+<video controls>
+  <source src="<%= url_for(@video.stream_recording_video) %>">
+</video>
+
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
