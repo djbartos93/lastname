@@ -1,5 +1,8 @@
 find me in dashboard#index.html.erb
 
+<p id="notice"><%= notice %></p>
+
+
 
 <p id="notice"><%= notice %></p>
 
@@ -15,18 +18,18 @@ find me in dashboard#index.html.erb
   </thead>
 
   <tbody>
-    <% @videos.each do |video| %>
+
       <tr>
-        <td><%= video.name %></td>
-        <td><%= video.recording_date %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= @videos.name %></td>
+        <td><%= @videos.recording_date %></td>
+        <video controls>
+          <source src="<%= url_for(@videos.stream_recording_video) %>">
+        </video>
+
+        <td><%= link_to 'Show', @videos %></td>
+
       </tr>
-    <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Video', new_video_path %>

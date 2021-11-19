@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
 
   def index
-    @videos = Video.all
+    @videos = Video.order("created_at").last
   end
-  
+
 end
