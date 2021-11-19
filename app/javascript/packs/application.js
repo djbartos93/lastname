@@ -12,6 +12,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+require("/app/assets/stylesheets/application.scss")
 
 
 addEventListener("direct-upload:initialize", event => {
