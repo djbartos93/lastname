@@ -32,3 +32,9 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
+backblaze:
+  service: Backblaze
+  bucket_name: lastname-videos
+  bucket_id: <%= ENV['B2_BUCKET_ID'] %>
+  key_id: <%= ENV['B2_KEY_ID'] %>
+  key_token: <%= ENV['B2_KEY_TOKEN'] %>
