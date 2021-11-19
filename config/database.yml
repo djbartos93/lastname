@@ -22,11 +22,11 @@ test:
 
 #setup the prod database to deploy properly on digitalocean (or any app engine)
 production:
-  host: <%= ENV[DATABASE_URL] %>
+  host: <%= ENV['DATABASE_URL'] %>
   port: 25060
   adapter: postgresql
   encoding: unicode
   database: lastname
   username: lastname
-  password: <% ENV[DATABASE_PASSWORD] %>
+  password: <% ENV['DATABASE_PASSWORD'] %>
   sslmode: require

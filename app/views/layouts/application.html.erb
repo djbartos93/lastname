@@ -8,9 +8,11 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   </head>
 
-  <body>
+  <body id="top">
 
     <% if user_signed_in? %>
   Signed in as <%= current_user.email %>. Not you?
@@ -26,5 +28,25 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
+
+
+    <a href="javascript:void(0)" id="theme-switch" onclick="switchMode(this)">☀️</a>
   </body>
+
+  <script>
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    document.body.classList.add("dark");
+    document.querySelector('#theme-switch').innerHTML = "🌙"
+  }
+
+  function switchMode(el) {
+    const bodyClass = document.body.classList;
+    bodyClass.contains("dark")
+      ? ((el.innerHTML = "☀️"), bodyClass.remove("dark"))
+      : ((el.innerHTML = "🌙"), bodyClass.add("dark"));
+  }
+</script>
 </html>
