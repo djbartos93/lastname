@@ -41,7 +41,7 @@ local:
 #  endpoint: https://s3.us-west-000.backblazeb2.com
 backblaze:
   service: S3
-  endpoint: nyc3.digitaloceanspaces.com
+  endpoint: https://nyc3.digitaloceanspaces.com
   access_key_id: <%= ENV['DO_SPACES_KEY'] %>
   secret_access_key: <%= ENV['DO_SPACES_SECRET'] %>
   bucket: lastname-videos
