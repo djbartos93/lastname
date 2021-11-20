@@ -45,3 +45,4 @@ backblaze:
   access_key_id: <%= ENV['DO_SPACES_KEY'] %>
   secret_access_key: <%= ENV['DO_SPACES_SECRET'] %>
   bucket: lastname-videos
+  region: unused
