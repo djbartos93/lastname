@@ -39,11 +39,11 @@
           </div>
         </div>
 
-        
+
 
 
   <div class="actions">
-    <%= form.submit "Save & Upload", data: { action: "click->upload-progress#showProgress" } %>
+    <%= form.submit "Save & Upload", data: { action: "click->upload-progress#showProgress" }, enctype: "multipart/form-data" %>
   </div>
 
 
