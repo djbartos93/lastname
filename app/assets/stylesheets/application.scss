@@ -13,18 +13,7 @@
  *= require_tree .
  *= require_self
  */
- body.dark {
-   --bg-color: #000;
-   --bg-secondary-color: #131316;
-   --font-color: #f5f5f5;
-   --color-grey: #ccc;
-   --color-darkGrey: #777;
- }
 
- video {
-   width: 100%;
-   height: auto;
- }
 
 
  /*! chota.css v0.7.2 | MIT License | github.com/jenil/chota */
@@ -1024,4 +1013,17 @@
      .hide-pr {
          display: none !important;
      }
+ }
+
+ body.dark {
+   --bg-color: #000;
+   --bg-secondary-color: #131316;
+   --font-color: #f5f5f5;
+   --color-grey: #ccc;
+   --color-darkGrey: #777;
+ }
+
+ video {
+   width: 100%;
+   height: auto;
  }
