@@ -26,24 +26,13 @@
 
 
       <%= form.label :stream_recording_video %>
-      <%= form.file_field :stream_recording_video, accept: "video/*", direct_upload: true %>
+      <%= form.file_field :stream_recording_video %>
 
   </div>
 
 
-        <div style="display: none;" data-upload-progress-target="progress">
-          <div>Uploading your video to our servers: <span id="progressText" data-upload-progress-target="progressText">Warming up...</span></div>
-          <div id="progress-bar" style="background: gray; position: relative; width: 200px; height: 20px;">
-            <div id="progressWidth" data-upload-progress-target="progressWidth" style="width: 0%; height: 100%; position: absolute; background: green;">
-            </div>
-          </div>
-        </div>
-
-        
-
-
   <div class="actions">
-    <%= form.submit "Save & Upload", data: { action: "click->upload-progress#showProgress" } %>
+    <%= form.submit "Save & Upload", data: { action: "click->upload-progress#showProgress" }, enctype: "multipart/form-data" %>
   </div>
 
 
