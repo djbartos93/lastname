@@ -66,6 +66,5 @@ gem 'devise'
 # and can can can to provide a role
 gem 'cancancan'
 
-group :production do
-  gem "aws-sdk-s3"
-end
+
+gem "aws-sdk-s3", require: false
